@@ -1,9 +1,14 @@
 from Crypto.Cipher import DES
-key = b'-8B key-'
-print(key)
-cipher = DES.new(key, DES.MODE_ECB)
-plaintext = b'sona si latine loqueris '
-msg = cipher.encrypt(plaintext)
-print(msg)
+from base64 import b64encode
+from Crypto.Util.Padding import pad
 
-print(cipher.decrypt(msg, key))
+key = b'clavepip'
+text =  b'Holaaaaaaa'
+
+cipher = DES.new(key, DES.MODE_ECB)
+c_msg = msg = cipher.encrypt(pad(text, DES.block_size))
+
+c_b64 = b64encode(c_msg).decode('utf-8')
+
+print(c_msg)
+print (c_b64)
