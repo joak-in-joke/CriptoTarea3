@@ -8,8 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
-$(document).ready(function() {
+(document).ready(function() {
     var msj_enc = document.getElementsByClassName("DES_ECB")[0].id
     });
 
-    $('body').append('<div class="DECRYPT" id="HOLA-SOCIO"></div>')
+    ('body').append('<div class="DECRYPT" id="HOLA-SOCIO"></div>')
