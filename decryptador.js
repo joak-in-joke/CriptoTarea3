@@ -7,6 +7,7 @@
 // @match        https://joak-in-joke.github.io/CriptoTarea3/
 // @grant        none
 // @require      https://raw.githubusercontent.com/ibrahimelaradi/DES/master/DES/DES.js
+// ==/UserScript==
 
 (function decrypt() {
     'use strict';
@@ -15,7 +16,7 @@
 
     console.log(msj_enc);
 
-    var decrypted = CryptoJS.DES.decrypt(msj_enc, "clavepip");
+    var decrypted = DES.encrypt( "clavepip", msj_enc);
     var d_msg = decrypted.toString(CryptoJS.enc.Utf8);
     console.log(d_msg);
 })();
