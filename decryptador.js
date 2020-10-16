@@ -7,6 +7,7 @@
 // @match        https://joak-in-joke.github.io/CriptoTarea3/
 // @grant        none
 // @require      https://raw.githubusercontent.com/ibrahimelaradi/DES/master/DES/DES.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/enc-base64.min.js
 // ==/UserScript==
 
 (function decrypt() {
