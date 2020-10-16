@@ -10,7 +10,7 @@
 (function decrypt() {
     'use strict';
 
-    var msj_enc = document.getElementsByClassName("DES_ECB")[0].id
+    var msj_enc = document.getElementsByClassName("DES_ECB")[0].id;
 
 
     ('body').append('<div class="DECRYPT" id="HOLA-SOCIO"></div>')
