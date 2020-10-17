@@ -13,11 +13,23 @@
 (function decrypt() {
     'use strict';
 
-    var msj_enc = document.getElementsByClassName("DES")[0].id;
 
+    var msj_enc = document.getElementsByClassName("DES")[0].id;
     console.log(msj_enc);
 
-    var decrypted = Crypto.DES.decrypt( msj_enc ,"clavepip");
-    var d_msg = Crypto.dec.Base64.UTF8(decrypted);
-    console.log(d_msg)
+    console.log(CryptoJS);
+
+
+    var keyHex = CryptoJS.enc.Utf8.parse("clavepip");
+
+
+    var decrypted = CryptoJS.DES.decrypt({
+        ciphertext: CryptoJS.enc.Base64.parse(msj_enc)
+    }, keyHex, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    });
+
+    console.log( decrypted.toString(CryptoJS.enc.Utf8));
 })();
+
